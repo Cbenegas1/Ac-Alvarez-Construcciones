@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cbenegas1.github.io/Ac-Alvarez-Construcciones/sitemap.xml
