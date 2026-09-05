@@ -1933,4 +1933,54 @@ button:focus-visible {
     max-width: 400px;
   }
 
+}.contacto{
+    padding:80px 20px;
+    background:#f8f8f8;
+}
+
+.contacto .container{
+    max-width:700px;
+    margin:auto;
+}
+
+.contacto h2{
+    text-align:center;
+    margin-bottom:10px;
+    color:#0a4d2e;
+}
+
+.contacto p{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+#presupuestoForm{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+#presupuestoForm input,
+#presupuestoForm select,
+#presupuestoForm textarea{
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+    width:100%;
+}
+
+#presupuestoForm button{
+    background:#0a8f45;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#presupuestoForm button:hover{
+    background:#087038;
 }
