@@ -1069,7 +1069,35 @@
       </div>
     </div>
   </section>
+<section class="contacto" id="contacto">
+    <div class="container">
+        <h2>Solicita tu Presupuesto</h2>
+        <p>Completa el formulario y nos pondremos en contacto contigo.</p>
 
+        <form id="presupuestoForm">
+            <input type="text" id="nombre" placeholder="Nombre y Apellido" required>
+
+            <input type="tel" id="telefono" placeholder="Teléfono / WhatsApp" required>
+
+            <input type="text" id="ciudad" placeholder="Ciudad o Departamento" required>
+
+            <select id="proyecto" required>
+                <option value="">Tipo de Proyecto</option>
+                <option>Casa Alpina</option>
+                <option>Piscina</option>
+                <option>Casa Tradicional</option>
+                <option>Quincho</option>
+                <option>Otro</option>
+            </select>
+
+            <textarea id="mensaje" rows="5" placeholder="Describe tu proyecto"></textarea>
+
+            <button type="submit">
+                Solicitar Presupuesto
+            </button>
+        </form>
+    </div>
+</section>
   <footer class="footer-site">
     <div class="footer-container">
       <div class="footer-col info-col" data-aos="fade-right">
