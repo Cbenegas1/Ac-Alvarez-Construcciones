@@ -813,3 +813,29 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
 });
+document.getElementById("presupuestoForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const ciudad = document.getElementById("ciudad").value;
+    const proyecto = document.getElementById("proyecto").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    const texto =
+`Hola AC Alvarez Construcciones.
+
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Ciudad: ${ciudad}
+Proyecto: ${proyecto}
+
+Mensaje:
+${mensaje}`;
+
+    const url = `https://wa.me/595981704655?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+});
