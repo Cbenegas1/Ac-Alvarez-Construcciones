@@ -2294,4 +2294,109 @@ button:focus-visible {
   .budget-container {
     padding: 24px 18px;
   }
+} /* =========================================================
+   RESPONSIVO: TESTIMONIOS Y FORMULARIO DE PRESUPUESTO
+========================================================= */
+
+@media (max-width: 768px) {
+  /* Testimonios */
+  .testimonial-section {
+    padding: 40px 15px;
+  }
+
+  .testimonial-grid {
+    gap: 24px;
+  }
+
+  .testimonial-card {
+    max-width: 100%; /* Permite ocupación completa en tablets pequeñas */
+  }
+
+  /* Formulario de Presupuesto */
+  .budget-section {
+    padding: 40px 15px;
+  }
+
+  .budget-container {
+    padding: 30px 20px;
+  }
+
+  .budget-title {
+    font-size: 1.75rem;
+  }
+
+  .budget-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Testimonios en Móvil */
+  .carousel-container,
+  .video-container {
+    height: 220px; /* Reduce la altura de las imágenes/videos en celulares */
+  }
+
+  .testimonial-content {
+    padding: 18px;
+  }
+
+  .header-info .title {
+    font-size: 1.1rem;
+  }
+
+  .header-info .location {
+    font-size: 0.8rem;
+  }
+
+  .quote {
+    font-size: 0.88rem;
+    padding: 10px 12px;
+    margin: 10px 0 14px 0;
+  }
+
+  .rating {
+    font-size: 0.95rem;
+  }
+
+  /* Formulario de Presupuesto en Móvil */
+  .budget-container {
+    padding: 24px 16px;
+    border-radius: 12px;
+  }
+
+  .budget-title {
+    font-size: 1.5rem;
+  }
+
+  .budget-subtitle {
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+  }
+
+  .budget-form {
+    grid-template-columns: 1fr; /* Coloca todos los campos a 1 sola columna */
+    gap: 15px;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .btn-submit {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
 }
