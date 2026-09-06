@@ -839,3 +839,45 @@ ${mensaje}`;
 
     window.open(url, "_blank");
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const slides = document.querySelectorAll(".carousel-slide");
+
+  if (!track || slides.length === 0) return;
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  // Función para desplazar el carrusel a un índice específico
+  const slideTo = (index) => {
+    if (index < 0) {
+      currentIndex = totalSlides - 1;
+    } else if (index >= totalSlides) {
+      currentIndex = 0;
+    } else {
+      currentIndex = index;
+    }
+
+    const slideWidth = slides[0].clientWidth;
+    track.scrollTo({
+      left: slideWidth * currentIndex,
+      behavior: "smooth"
+    });
+  };
+
+  // Desplazamiento automático cada 4 segundos
+  let autoSlide = setInterval(() => {
+    slideTo(currentIndex + 1);
+  }, 4000);
+
+  // Pausar el desplazamiento automático al interactuar con el carrusel
+  track.addEventListener("touchstart", () => clearInterval(autoSlide), { passive: true });
+  track.addEventListener("mouseenter", () => clearInterval(autoSlide));
+
+  // Reanudar desplazamiento automático al salir del carrusel
+  track.addEventListener("mouseleave", () => {
+    autoSlide = setInterval(() => {
+      slideTo(currentIndex + 1);
+    }, 4000);
+  });
+});
