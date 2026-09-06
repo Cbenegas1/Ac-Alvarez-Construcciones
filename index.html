@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-PY">
-<head>
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -1045,6 +1046,74 @@
     </div>
   </section>
 
+<section class="testimonial-section">
+  <div class="testimonial-grid">
+
+    <!-- TARJETA 1: Cabaña Kuarahy -->
+    <article class="testimonial-card">
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="Testimonio11.jpeg" alt="Fachada de la Cabaña Kuarahy"></div>
+          <div class="carousel-slide"><img src="Testimonio12.jpeg" alt="Estructura exterior y balcón"></div>
+          <div class="carousel-slide"><img src="Testimonio13.jpeg" alt="Vista desde el balcón"></div>
+          <div class="carousel-slide"><img src="Testimonio14.jpeg" alt="Interior con techo alpino"></div>
+          <div class="carousel-slide"><img src="Testimonio15.jpeg" alt="Puerta artesanal de madera"></div>
+          <div class="carousel-slide"><img src="Testimonio16.jpeg" alt="Vista lateral de la cabaña"></div>
+        </div>
+      </div>
+
+      <div class="testimonial-content">
+        <div class="header-info">
+          <h2 class="title">🏡 Cabaña Kuarahy</h2>
+          <p class="location">📍 San Joaquín, Caaguazú</p>
+        </div>
+
+        <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+
+        <blockquote class="quote">
+          "Excelente trabajo y acabado en la Cabaña Kuarahy. Los detalles en piedra, la estructura de madera y la comodidad del espacio superaron todas las expectativas."
+        </blockquote>
+
+        <div class="contact-info">
+          <strong>Cliente:</strong> Luis Alvarez <br>
+          <strong>Contacto:</strong> 📲 0987 654 321
+        </div>
+      </div>
+    </article>
+
+    <!-- TARJETA 2: Cabaña Arasapy -->
+    <article class="testimonial-card">
+      <div class="video-container">
+      <div class="video-container">
+  <video autoplay muted loop playsinline poster="portada-cabana.jpg" preload="metadata">
+    <source src="CabañaArasapy.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+</div>
+      </div>
+
+      <div class="testimonial-content">
+        <div class="header-info">
+          <h3 class="title">🏡 Cabaña Arasapy</h3>
+          <p class="location">📍 Cerro Escobar, Paraguarí</p>
+        </div>
+
+        <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
+
+        <blockquote class="quote">
+          "¡Agradecidos y muy felices con el trabajo realizado! Construir una cabaña estilo alpino en este terreno era un desafío, pero el acabado en madera, los detalles de la terraza y la integración con la piscina quedaron impecables. Superaron nuestras expectativas en cada rincón."
+
+        <div class="social-link">
+          <a href="https://www.tiktok.com/@carolar572" target="_blank" rel="noopener noreferrer">
+            Ver más en TikTok @carolar572
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
   <section id="contacto" class="contact-section-v2">
     <div class="container-contacto">
       <h2>¿Iniciamos tu proyecto hoy?</h2>
@@ -1069,35 +1138,54 @@
       </div>
     </div>
   </section>
-<section class="contacto" id="contacto">
-    <div class="container">
-        <h2>Solicita tu Presupuesto</h2>
-        <p>Completa el formulario y nos pondremos en contacto contigo.</p>
+<section class="budget-section">
+  <div class="budget-container">
+    <h2 class="budget-title">Solicita tu Presupuesto</h2>
+    <p class="budget-subtitle">Completa el formulario y nos pondremos en contacto contigo.</p>
 
-        <form id="presupuestoForm">
-            <input type="text" id="nombre" placeholder="Nombre y Apellido" required>
+    <form class="budget-form">
+      <!-- Fila 1: Nombre y Teléfono -->
+      <div class="form-group">
+        <label for="nombre">Nombre y Apellido</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+      </div>
 
-            <input type="tel" id="telefono" placeholder="Teléfono / WhatsApp" required>
+      <div class="form-group">
+        <label for="telefono">Teléfono / WhatsApp</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 0981 123 456" required>
+      </div>
 
-            <input type="text" id="ciudad" placeholder="Ciudad o Departamento" required>
+      <!-- Fila 2: Ubicación y Tipo de Proyecto -->
+      <div class="form-group">
+        <label for="ciudad">Ciudad o Departamento</label>
+        <input type="text" id="ciudad" name="ciudad" placeholder="Ej. Paraguarí" required>
+      </div>
 
-            <select id="proyecto" required>
-                <option value="">Tipo de Proyecto</option>
-                <option>Casa Alpina</option>
-                <option>Piscina</option>
-                <option>Casa Tradicional</option>
-                <option>Quincho</option>
-                <option>Otro</option>
-            </select>
+      <div class="form-group">
+        <label for="tipo">Tipo de Proyecto</label>
+        <select id="tipo" name="tipo" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="alpina">Cabaña Alpina</option>
+          <option value="rustica">Cabaña Rústica</option>
+          <option value="piscina">Piscina / Cascada</option>
+          <option value="otro">Otro Proyecto</option>
+        </select>
+      </div>
 
-            <textarea id="mensaje" rows="5" placeholder="Describe tu proyecto"></textarea>
+      <!-- Fila 3: Descripción (Ancho completo) -->
+      <div class="form-group full-width">
+        <label for="descripcion">Describe tu proyecto</label>
+        <textarea id="descripcion" name="descripcion" rows="4" placeholder="Cuéntanos más detalles sobre lo que deseas construir..."></textarea>
+      </div>
 
-            <button type="submit">
-                Solicitar Presupuesto
-            </button>
-        </form>
-    </div>
+      <!-- Botón de Envío -->
+      <div class="form-group full-width">
+        <button type="submit" class="btn-submit">Solicitar Presupuesto</button>
+      </div>
+    </form>
+  </div>
 </section>
+
   <footer class="footer-site">
     <div class="footer-container">
       <div class="footer-col info-col" data-aos="fade-right">
