@@ -1933,54 +1933,365 @@ button:focus-visible {
     max-width: 400px;
   }
 
-}.contacto{
-    padding:80px 20px;
-    background:#f8f8f8;
+}/* Seccion principal para centrar horizontal y verticalmente */
+.testimonial-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
-.contacto .container{
-    max-width:700px;
-    margin:auto;
+/* Tarjeta estructurada */
+.testimonial-card {
+  background: var(--white, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 450px; /* Ancho de la tarjeta */
+  width: 100%;
+  overflow: hidden; /* Corta bordes de la imagen para respetar el border-radius */
+  margin: 0 auto;
 }
 
-.contacto h2{
-    text-align:center;
-    margin-bottom:10px;
-    color:#0a4d2e;
+/* Carrusel de imagenes dentro de la tarjeta */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 280px; /* Altura fija para la imagen */
+  overflow: hidden;
+  background-color: #f0f0f0;
 }
 
-.contacto p{
-    text-align:center;
-    margin-bottom:30px;
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
 }
 
-#presupuestoForm{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+.carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
-#presupuestoForm input,
-#presupuestoForm select,
-#presupuestoForm textarea{
-    padding:15px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    font-size:16px;
-    width:100%;
+.carousel-slide {
+  flex: 0 0 100%; /* Cada slide ocupa el 100% exacto del carrusel */
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
 }
 
-#presupuestoForm button{
-    background:#0a8f45;
-    color:white;
-    border:none;
-    padding:15px;
-    border-radius:8px;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene proporción sin deformar la foto */
+  display: block;
 }
 
-#presupuestoForm button:hover{
-    background:#087038;
+/* Información del texto */
+.testimonial-content {
+  padding: 24px;
+}
+
+.header-info .title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--primary-color, #333);
+}
+
+.header-info .location {
+  margin: 4px 0 0 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.quote {
+  margin: 16px 0;
+  padding: 10px 14px;
+  background: #f8f9fa;
+  border-left: 4px solid var(--accent-color, #007bff);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.rating {
+  color: #ffc107;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.contact-info {
+  font-size: 0.8rem;
+  color: #666;
+}/* =========================================================
+   SECCIÓN DE TESTIMONIOS (MODERNO & RESPONSIVO)
+========================================================= */
+
+.testimonial-section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: var(--light-color, #f8f9fa);
+  box-sizing: border-box;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Tarjeta principal */
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 420px;
+  flex: 1 1 320px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Multimedia (Carrusel & Video) */
+.carousel-container,
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-color: #111111;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+.carousel-slide img,
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Contenido de la tarjeta */
+.testimonial-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.header-info .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color, #1a1a1a);
+  margin: 0 0 6px 0;
+}
+
+.header-info .location {
+  font-size: 0.88rem;
+  color: #666666;
+  font-weight: 500;
+  margin: 0;
+}
+
+.rating {
+  color: #ffb400;
+  font-size: 1.05rem;
+  margin: 12px 0 8px 0;
+  letter-spacing: 2px;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4a4a4a;
+  background: #f4f6f8;
+  border-left: 4px solid var(--accent-color, #25f4ee);
+  margin: 12px 0 18px 0;
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+}
+
+.contact-info {
+  font-size: 0.85rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* Enlace a TikTok estilo Botón Pill */
+.social-link {
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.social-link a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 16px;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 12px;
+  box-sizing: border-box;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.social-link a:hover {
+  background-color: #222222;
+  transform: scale(1.01);
+}/* Sección Contenedora */
+.budget-section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+}
+
+.budget-container {
+  max-width: 750px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Títulos */
+.budget-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.budget-subtitle {
+  font-size: 1rem;
+  color: #666666;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+/* Grilla del Formulario */
+.budget-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+  gap: 20px;
+}
+
+/* Campos de entrada */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: span 2; /* Ocupa las 2 columnas */
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* Botón */
+.btn-submit {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-submit:hover {
+  background-color: #222222;
+}
+
+.btn-submit:active {
+  transform: scale(0.99);
+}
+
+/* Responsivo para celulares */
+@media (max-width: 600px) {
+  .budget-form {
+    grid-template-columns: 1fr; /* Pasa a 1 columna en pantallas pequeñas */
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .budget-container {
+    padding: 24px 18px;
+  }
 }
