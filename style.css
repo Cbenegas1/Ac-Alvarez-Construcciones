@@ -2400,3 +2400,43 @@ button:focus-visible {
     font-size: 0.95rem;
   }
 }
+/* =========================================================
+   RESPONSIVO: ADAPTACIÓN DE VIDEOS PARA MÓVIL
+========================================================= */
+
+@media (max-width: 768px) {
+  /* Mantiene los contenedores de video adaptables */
+  .video-container,
+  .media-container {
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+    max-height: 350px;
+  }
+
+  .video-container video,
+  .media-container video,
+  .project-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video sin deformarlo */
+  }
+}
+
+@media (max-width: 600px) {
+  /* Ajuste específico para celulares en testimonios y proyectos */
+  .testimonial-card .video-container,
+  .project-card .project-image video {
+    height: 220px;
+    max-height: 250px;
+  }
+
+  /* Si usas videos embebidos con iframe (YouTube / TikTok / Vimeo) */
+  .video-container iframe,
+  .testimonial-card iframe {
+    width: 100%;
+    height: 220px;
+    border: none;
+    border-radius: 12px;
+  }
+}
