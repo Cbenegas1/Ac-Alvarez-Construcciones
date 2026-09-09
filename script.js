@@ -1352,4 +1352,12 @@ Quedo atento/a a su respuesta. ¡Muchas gracias!`;
     "AC Alvarez Construcciones — Web cargada correctamente."
   );
 
+});window.addEventListener("scroll", () => {
+    const header = document.querySelector(".header");
+
+    if(window.scrollY > 80){
+        header.classList.add("scrolled");
+    }else{
+        header.classList.remove("scrolled");
+    }
 });
