@@ -1353,24 +1353,3 @@ Quedo atento/a a su respuesta. ¡Muchas gracias!`;
   );
 
 });
-let lastScroll = 0;
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-
-  if (currentScroll <= 0) {
-    header.style.top = "0";
-    return;
-  }
-
-  if (currentScroll > lastScroll) {
-    /* Bajando */
-    header.style.top = "-120px";
-  } else {
-    /* Subiendo */
-    header.style.top = "0";
-  }
-
-  lastScroll = currentScroll;
-});
