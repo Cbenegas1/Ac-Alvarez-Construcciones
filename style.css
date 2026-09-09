@@ -316,6 +316,8 @@ ul {
 
     z-index: 1000;
 
+transition: all .4s ease;
+
     background:
         linear-gradient(
             to bottom,
@@ -323,6 +325,11 @@ ul {
             rgba(0,0,0,0)
         );
 
+}
+.header.scrolled{
+    background: rgba(10,10,10,.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
 
